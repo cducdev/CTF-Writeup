@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSTI Lab · Jinja2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="SSTI Lab, về trang đầu">
+        <span class="brand-mark" aria-hidden="true">{ }</span>
+        <span>SSTI Lab</span>
+      </a>
+      <span class="local-badge">Local only</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Jinja2 · Flask</p>
+        <h1 id="page-title">Thấy template injection xảy ra ngay trước mắt.</h1>
+        <p class="lede">
+          Nhập một biểu thức Jinja, rồi so sánh cách render dễ dính SSTI
+          với cách xem input như dữ liệu thuần.
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Khu vực thử nghiệm">
+        <form method="post">
+          <div class="field-heading">
+            <label for="template">Jinja expression</label>
+            <span>Tối đa {{ max_length }} ký tự</span>
+          </div>
+          <textarea
+            id="template"
+            name="template"
+            rows="5"
+            maxlength="{{ max_length }}"
+            placeholder="{{ '{{ 7 * 7 }}' }}"
+            spellcheck="false"
+            required
+          >{{ payload }}</textarea>
+
+          <div class="example" aria-label="Payload gợi ý">
+            <span>Thử:</span>
+            <code>{{ '{{ 7 * 7 }}' }}</code>
+            <code>{{ '{{ config }}' }}</code>
+          </div>
+
+          <div class="actions">
+            <button class="button danger" type="submit" name="mode" value="vulnerable">
+              Render vulnerable
+            </button>
+            <button class="button safe" type="submit" name="mode" value="safe">
+              Render safe
+            </button>
+          </div>
+        </form>
+
+        <aside class="result-panel" aria-labelledby="result-title" aria-live="polite">
+          <div class="result-heading">
+            <h2 id="result-title">Kết quả</h2>
+            {% if result is not none or error %}
+              <span class="mode {{ mode }}">
+                {{ 'Vulnerable' if mode == 'vulnerable' else 'Safe' }}
+              </span>
+            {% endif %}
+          </div>
+
+          {% if error %}
+            <p class="error" role="alert">{{ error }}</p>
+          {% elif result is not none %}
+            <pre><output id="result">{{ result }}</output></pre>
+          {% else %}
+            <div class="empty-state">
+              <span aria-hidden="true">→</span>
+              <p>Kết quả render sẽ xuất hiện ở đây.</p>
+            </div>
+          {% endif %}
+        </aside>
+      </section>
+
+      <section class="explanation" aria-labelledby="why-title">
+        <div>
+          <p class="step">01 · Vulnerable</p>
+          <h2 id="why-title">Input trở thành mã template</h2>
+          <code>render_template_string(user_input)</code>
+        </div>
+        <div>
+          <p class="step">02 · Safe</p>
+          <h2>Input chỉ là dữ liệu</h2>
+          <code>render_template("index.html", result=user_input)</code>
+        </div>
+      </section>
+
+      <aside class="warning" aria-label="Cảnh báo an toàn">
+        <strong>Lab cố ý chứa lỗ hổng.</strong>
+        Chỉ chạy trên máy cá nhân qua <code>127.0.0.1:8000</code>; không deploy hoặc mở port ra mạng.
+      </aside>
+    </main>
+  </body>
+</html>

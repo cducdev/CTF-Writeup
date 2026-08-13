@@ -1,0 +1,11 @@
+services:
+  app:
+    build: ./app
+    environment:
+      - FLAG=L3AK{FAKE_FLAG_FOR_TESTING}
+    ports:
+      - "13337:3000"
+    init: true
+    restart: unless-stopped
+    cpus: 2.0
+    mem_limit: 512m
