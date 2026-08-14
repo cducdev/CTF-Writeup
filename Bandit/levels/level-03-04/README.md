@@ -1,6 +1,10 @@
-## Bandit Level 3 → 4 Writeup
+# Bandit Level 3 → 4 Writeup
+
+## Goal
 
 > The password for the next level is stored in a hidden file in the `inhere` directory.
+
+## Analysis
 
 Because the target file is hidden, I used the `-a` (all files) option with the `ls` command:
 
@@ -8,7 +12,11 @@ Because the target file is hidden, I used the `-a` (all files) option with the `
 ls -la inhere
 ```
 
-Then I found the hidden file named `...Hiding-From-You`, so I retrieved its contents using `cat`:
+The output showed a hidden file named `...Hiding-From-You`.
+
+## Solution
+
+I retrieved its contents using `cat`:
 
 ```bash
 cat inhere/...Hiding-From-You
@@ -16,8 +24,13 @@ cat inhere/...Hiding-From-You
 
 ![Exploit](./assets/exploit.png)
 
-Password for the next level:
+## Password
 
 ```text
 xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
 ```
+
+## Key Takeaways
+
+- Use the `-a` option with `ls` to include hidden files in the output.
+- Hidden filenames on Unix-like systems begin with a dot (`.`).
