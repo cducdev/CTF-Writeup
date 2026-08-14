@@ -4,7 +4,7 @@
 
 > Add the challenge description here.
 
-## Enumeration
+## Analysis
 
 <!-- Describe what you checked first and why you chose this command. -->
 
@@ -13,8 +13,6 @@ initial-command
 ```
 
 <!-- Add a screenshot if needed: ![Recon](./assets/recon.png) -->
-
-## Analysis
 
 <!-- Describe what you observed, what did not work, and any difficulty you encountered. -->
 
