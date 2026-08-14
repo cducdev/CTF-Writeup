@@ -1,6 +1,10 @@
-## Bandit Level 1 → 2 Writeup
+# Bandit Level 1 → 2 Writeup
+
+## Goal
 
 > The password for the next level is stored in a file called `-`, located in the home directory.
+
+## Analysis
 
 List all files in long format:
 
@@ -18,7 +22,11 @@ However, nothing was printed, and it felt like the command had not finished runn
 
 ![Dashed filename info](./assets/hint.png)
 
-The problem is that `cat` interprets `-` as standard input instead of a filename. To avoid this, I tried specifying the file with a relative path:
+The problem is that `cat` interprets `-` as standard input instead of a filename.
+
+## Solution
+
+To avoid this, I specified the file with a relative path:
 
 ```bash
 cat ./-
@@ -28,8 +36,13 @@ This time, the command printed the password successfully.
 
 ![Exploit](./assets/exploit.png)
 
-Password for the next level:
+## Password
 
 ```text
 PK8fYLZg2hnHSz83plBL1iEPKdD3QToB
 ```
+
+## Key Takeaways
+
+- `cat -` reads from standard input instead of a file named `-`.
+- Prefixing the filename with `./` makes it an explicit relative path.

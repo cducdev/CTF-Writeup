@@ -1,6 +1,10 @@
-## Bandit Level 2 → 3 Writeup
+# Bandit Level 2 → 3 Writeup
+
+## Goal
 
 > The password for the next level is stored in a file called `--spaces in this filename--`, located in the home directory.
+
+## Analysis
 
 List all files in long format:
 
@@ -8,7 +12,11 @@ List all files in long format:
 ls -la
 ```
 
-I found a file named `--spaces in this filename--`. Because the filename contains spaces, I used `\` (backslash) to escape each space. I also added `./` so that the filename would be treated as a relative path instead of an option. My command is:
+I found a file named `--spaces in this filename--`. Because the filename contains spaces, I used `\` (backslash) to escape each space. I also added `./` so that the filename would be treated as a relative path instead of an option.
+
+## Solution
+
+My command is:
 
 ```bash
 cat ./--spaces\ in\ this\ filename--
@@ -16,8 +24,13 @@ cat ./--spaces\ in\ this\ filename--
 
 ![Exploit](./assets/exploit.png)
 
-Password for the next level:
+## Password
 
 ```text
 7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
 ```
+
+## Key Takeaways
+
+- Escape spaces with `\` when using an unquoted filename in the shell.
+- Prefix a dashed filename with `./` so that it is treated as a relative path.

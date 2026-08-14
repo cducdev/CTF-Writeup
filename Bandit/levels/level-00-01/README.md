@@ -1,6 +1,10 @@
-## Bandit Level 0 → 1 Writeup
+# Bandit Level 0 → 1 Writeup
 
-This level requires us to retrieve the contents of the `readme` file located in the home directory of the SSH server.
+## Goal
+
+> Retrieve the contents of the `readme` file located in the home directory of the SSH server.
+
+## Analysis
 
 Connect to the server with password `bandit0`:
 
@@ -14,7 +18,11 @@ List all files in long format:
 ls -la
 ```
 
-You will see a file named `readme`. Display its contents with:
+The output shows a file named `readme`.
+
+## Solution
+
+Display its contents with:
 
 ```bash
 cat readme
@@ -22,8 +30,13 @@ cat readme
 
 ![Exploit](./assets/exploit.png)
 
-Password for the next level:
+## Password
 
 ```text
 6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR
 ```
+
+## Key Takeaways
+
+- Use `ls -la` to list all files in long format.
+- Use `cat` to display the contents of a text file.
