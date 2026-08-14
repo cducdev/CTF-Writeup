@@ -20,7 +20,7 @@ You will see a file named `readme`. Display its contents with:
 cat readme
 ```
 
-![Exploit](./exploit.png)
+![Exploit](./assets/exploit.png)
 
 Password for the next level:
 

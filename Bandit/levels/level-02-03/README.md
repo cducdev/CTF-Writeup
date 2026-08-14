@@ -14,7 +14,7 @@ I found a file named `--spaces in this filename--`. Because the filename contain
 cat ./--spaces\ in\ this\ filename--
 ```
 
-![Exploit](./exploit.png)
+![Exploit](./assets/exploit.png)
 
 Password for the next level:
 
