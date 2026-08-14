@@ -4,25 +4,15 @@ This repository contains my solutions and notes for the [OverTheWire Bandit](htt
 
 > **Spoiler warning:** Each writeup contains the password for the next level.
 
-## Connection
-
-Connect to the first level with:
-
-```bash
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-```
-
-The initial password is `bandit0`.
-
 ## Progress
 
-| Level | Main concept | Writeup |
-| --- | --- | --- |
-| 0 → 1 | Reading a file | [View writeup](./levels/level-00-01/) |
-| 1 → 2 | Dashed filenames | [View writeup](./levels/level-01-02/) |
+| Level | Main concept                | Writeup                               |
+| ----- | --------------------------- | ------------------------------------- |
+| 0 → 1 | Reading a file              | [View writeup](./levels/level-00-01/) |
+| 1 → 2 | Dashed filenames            | [View writeup](./levels/level-01-02/) |
 | 2 → 3 | Filenames containing spaces | [View writeup](./levels/level-02-03/) |
-| 3 → 4 | Hidden files | [View writeup](./levels/level-03-04/) |
-| 4 → 5 | File types and wildcards | [View writeup](./levels/level-04-05/) |
+| 3 → 4 | Hidden files                | [View writeup](./levels/level-03-04/) |
+| 4 → 5 | File types and wildcards    | [View writeup](./levels/level-04-05/) |
 
 ## Repository Structure
 
