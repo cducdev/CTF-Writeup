@@ -4,7 +4,7 @@
 
 > The password for the next level is stored in a hidden file in the `inhere` directory.
 
-## Analysis
+## Solution
 
 Because the target file is hidden, I used the `-a` (all files) option with the `ls` command:
 
@@ -12,11 +12,7 @@ Because the target file is hidden, I used the `-a` (all files) option with the `
 ls -la inhere
 ```
 
-The output showed a hidden file named `...Hiding-From-You`.
-
-## Solution
-
-I retrieved its contents using `cat`:
+The output showed a hidden file named `...Hiding-From-You`, so I retrieved its contents using `cat`:
 
 ```bash
 cat inhere/...Hiding-From-You
@@ -29,8 +25,3 @@ cat inhere/...Hiding-From-You
 ```text
 xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq
 ```
-
-## Key Takeaways
-
-- Use the `-a` option with `ls` to include hidden files in the output.
-- Hidden filenames on Unix-like systems begin with a dot (`.`).

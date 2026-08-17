@@ -4,7 +4,7 @@
 
 > The password for the next level is stored in the only human-readable file in the `inhere` directory. Tip: if your terminal is messed up, try the “reset” command.
 
-## Analysis
+## Solution
 
 I listed all files in the `inhere` directory. I saw that there were many files, so I tried using `cat` on some of them to see what they contained.
 
@@ -22,11 +22,7 @@ file ./*
 
 The `*` character is called a wildcard. The shell expands `./*` to all non-hidden entries in the current directory, allowing `file` to inspect them at once.
 
-The output showed that `./-file07` contained ASCII text.
-
-## Solution
-
-I retrieved its contents using `cat`:
+The output showed that `./-file07` contained ASCII text, so I retrieved its contents using `cat`:
 
 ```bash
 cat ./-file07
@@ -39,8 +35,3 @@ cat ./-file07
 ```text
 6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG
 ```
-
-## Key Takeaways
-
-- Use `file` to identify the type of data stored in a file.
-- The `*` wildcard expands to all matching non-hidden entries in the current directory.

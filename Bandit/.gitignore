@@ -1,3 +1,6 @@
 .DS_Store
 levels/**/password.txt
 levels/**/sshkey.private
+levels/**/*sshkey*
+levels/**/*.sshkey
+levels/**/repo/

@@ -49,17 +49,21 @@ Correct!
 -----END OPENSSH PRIVATE KEY-----
 ```
 
-The server returned a private SSH key instead of a password. I ran the command again and used `sed` to save only the key block, then changed its permissions so that only my user could read and write it:
+This level returns a private SSH key instead of a normal password. I ran the command again and used `sed` to save only the key block, then changed the file permissions so SSH would accept it:
 
 ```bash
 bandit16@bandit:/tmp/tmp.hEnnFpvDRU$ echo kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V | ncat --ssl localhost 31790 | sed -n '/BEGIN OPENSSH PRIVATE KEY/,/END OPENSSH PRIVATE KEY/p' > sshkey.private
 bandit16@bandit:/tmp/tmp.hEnnFpvDRU$ chmod 600 sshkey.private
 ```
 
-Finally, I used the private key to log into the next level:
+Finally, I used the private key to log in as `bandit17`:
 
 ```bash
 bandit16@bandit:/tmp/tmp.hEnnFpvDRU$ ssh -i sshkey.private bandit17@localhost -p 2220
 ```
 
-The private key is the credential for Level 17. I stored my local copy in `assets/sshkey.private`, which is excluded from Git rather than publishing it in this writeup.
+## Password
+
+```text
+Private SSH key returned by port 31790
+```

@@ -8,6 +8,8 @@
 
 The `suconnect` binary expects another process to be listening on a local port. That process must send the current password to `suconnect`, which will check it and return the password for the next level over the same connection.
 
+The `nc` command can work as either a network client or a simple TCP server. When used with the `-l` option, it enters listen mode, opens a local port, and waits for another process to connect. The `-p` option specifies the listening port. Data provided to the standard input of `nc` is sent to the connected client, while data received from the client is printed to standard output.
+
 I chose port 3101 and started a listener with `nc`. I piped the current password into the listener and added `&` so that it would run in the background, allowing me to use the same terminal for the next command:
 
 ```bash

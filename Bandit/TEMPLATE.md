@@ -4,38 +4,16 @@
 
 > Add the challenge description here.
 
-## Analysis
-
-<!-- Describe what you checked first and why you chose this command. -->
-
-```bash
-initial-command
-```
-
-<!-- Add a screenshot if needed: ![Recon](./assets/recon.png) -->
-
-<!-- Describe what you observed, what did not work, and any difficulty you encountered. -->
-
-<!-- Explain how those observations led you to the final approach. -->
-
 ## Solution
 
-<!-- Describe the final approach before showing the command. -->
+Write the solution in a short first-person flow. Include what I checked, what did not work if it matters, and the final command.
 
 ```bash
 solution-command
 ```
-
-<!-- Add the final screenshot: ![Exploit](./assets/exploit.png) -->
 
 ## Password
 
 ```text
 PASSWORD
 ```
-
-## Key Takeaways
-
-<!-- Summarize the new command, concept, or lesson learned from this level. -->
-
-- Add a key takeaway here.
