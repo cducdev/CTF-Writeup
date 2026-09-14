@@ -14,4 +14,4 @@ Tổng hợp writeup các challenge **Hachimi Revenger Fixed**, **MemeLibrary** 
 
 [Xem record trên Facebook](https://www.facebook.com/cducdev.311/videos/1778030406730808/)
 
-> **Lưu ý:** Em setup lỗi nên từ phút **1:36** trở đi mới thấy màn hình thực tế.
+> **Lưu ý:** Em setup lỗi nên từ thời gian **1:36:00** trở đi mới thấy màn hình thực tế.
