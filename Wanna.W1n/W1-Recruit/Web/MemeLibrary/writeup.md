@@ -48,7 +48,7 @@ EXPOSE 8000
 ENTRYPOINT ["tini", "--", "java", "-jar", "/app/app.jar"]
 ```
 
-Có thể thấy, app này có `BOT_BASE_URL` và có cài đặt các package liên quan tới bot browser, bên cạnh đó còn có tài khoản admin. Từ những dấu hiệu này, mình đặt giả thuyết rằng hướng khai thác sẽ liên quan đến việc tận dụng phiên đăng nhập của bot để lấy flag. Và với kinh nghiệm chơi CTF thì mình đoán 90-95% là bài này là một bài XSS :v
+Có thể thấy, app này có `BOT_BASE_URL` và có cài đặt các package liên quan tới bot browser, bên cạnh đó còn có tài khoản admin. Từ những dấu hiệu này, mình đặt giả thuyết rằng hướng khai thác sẽ liên quan đến việc tận dụng phiên đăng nhập của bot để lấy flag. Và với kinh nghiệm chơi CTF non nớt thì mình đoán 90-95% là bài này là một bài XSS :v (và mình đã sai)
 
 ### Recon
 
