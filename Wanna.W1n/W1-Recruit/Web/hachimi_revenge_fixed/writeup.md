@@ -6,7 +6,7 @@
 
 ## Overview
 
-Đây là bài khó nhất trong series **Hachimi Challenge** của W1 Recruit CTF. Mục tiêu là truy cập vào `/admin` để lấy flag. Exploit chain trong writeup này cũng có thể áp dụng cho **Hachimi**, **Hachimi revenger**, và **Hachimi fixed**.
+> Đây là bài khó nhất trong series **Hachimi Challenge** của W1 Recruit CTF. Mục tiêu là truy cập vào `/admin` để lấy flag. Exploit chain trong writeup này cũng có thể áp dụng cho **Hachimi**, **Hachimi revenger**, và **Hachimi fixed**.
 
 ## Solution
 
