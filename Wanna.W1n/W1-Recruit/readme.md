@@ -1,6 +1,6 @@
 # WannaGame Recruit 2026 — Writeups
 
-Tổng hợp writeup các challenge **Hachimi Revenger Fixed**, **MemeLibrary** và **KOTH** trong cuộc thi CTF **WannaGame Recruit 2026**, được tổ chức bởi **UIT InsecLab**.
+Tổng hợp writeup các challenge **Hachimi Revenger Fixed**, **MemeLibrary**, **No Flock** và **KOTH** trong cuộc thi CTF **WannaGame Recruit 2026**, được tổ chức bởi **UIT InsecLab**.
 
 ## Danh sách writeup
 
@@ -8,6 +8,7 @@ Tổng hợp writeup các challenge **Hachimi Revenger Fixed**, **MemeLibrary** 
 | ------------------------ | ---------------- | --------------------------------------------------- |
 | Hachimi Revenger Fixed   | Web Exploitation | [Đọc writeup](Web/hachimi_revenge_fixed/writeup.md) |
 | MemeLibrary              | Web Exploitation | [Đọc writeup](Web/MemeLibrary/writeup.md)           |
+| No Flock                 | Web Exploitation | [Đọc writeup](Web/No-Flock/writeup.md)              |
 | KOTH — Build a Snake Bot | Misc             | [Đọc writeup](misc/koth/writeup.md)                 |
 
 ## Record
